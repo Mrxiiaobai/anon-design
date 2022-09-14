@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "esModuleInterop": true,
+    "types": ["jest"],
+    // "typeRoots": ["./typings.d.ts"],
+    "strict": true,
+    "skipLibCheck": true,
+    "declaration": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "baseUrl": "./",
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "noImplicitAny": false
+  },
+  // "include": ["src/*.d.ts"],
+  "exclude": ["node_modules"]
+}

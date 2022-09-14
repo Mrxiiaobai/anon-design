@@ -1,0 +1,79 @@
+{
+  "private": false,
+  "name": "@anon/design-mobile",
+  "version": "1.0.100",
+  "description": "测试组件库",
+  "scripts": {
+    "dev": "dumi dev",
+    "docs:build": "dumi build",
+    "docs:deploy": "gh-pages -d docs-dist",
+    "build": "father-build",
+    "deploy": "npm run docs:build && npm run docs:deploy",
+    "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
+    "test": "umi-test",
+    "test:coverage": "umi-test --coverage",
+    "prepublishOnly": "npm run build",
+    "transform": "./node_modules/.bin/babel -d lib/ src  --copy-files"
+  },
+  "main": "./lib/index.js",
+  "module": "es/index.js",
+  "typings": "es/index.d.ts",
+  "author": "jiangming",
+  "license": "MIT",
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+http://gits.boluome.com/OTOSaaS/oto_saas_web_app_component.git"
+  },
+  "keywords": [
+    "react-ui",
+    "react-component",
+    "ui"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,jsx,less,md,json}": [
+      "prettier --write"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "dependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/runtime": "^7.18.0",
+    "@boluome/common-lib": "^1.0.35",
+    "@umijs/babel-preset-umi": "^3.5.23",
+    "@umijs/bundler-utils": "^4.0.0-canary.20220421.1",
+    "@umijs/plugin-sass": "^1.1.1",
+    "antd-mobile": "^5.11.1",
+    "antd-mobile-icons": "^0.3.0",
+    "antd-mobile-v5": "npm:antd-mobile@5",
+    "react": "^17.0.2",
+    "rollup-plugin-commonjs": "^10.1.0"
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^12.1.2",
+    "@types/jest": "^27.0.3",
+    "@umijs/fabric": "^2.8.1",
+    "@umijs/plugin-antd-mobile": "^1.2.0",
+    "@umijs/test": "^3.0.5",
+    "babel-plugin-import": "^1.13.5",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "dumi": "^1.1.0",
+    "dumi-theme-mobile": "^1.1.22",
+    "father-build": "^1.17.2",
+    "gh-pages": "^3.0.0",
+    "lint-staged": "^10.0.7",
+    "node-sass": "^7.0.1",
+    "postcss-plugin-px2rem": "^0.8.1",
+    "prettier": "^2.2.1",
+    "sass-loader": "^12.6.0",
+    "yorkie": "^2.0.0"
+  }
+}
